@@ -2,9 +2,6 @@
   <v-row justify="center" align="center">
     <v-col cols="12" sm="8" md="6">
       <v-card class="logo py-4 d-flex justify-center">
-        <img width="150" height="150"
-          src="https://d2x1f45n1rztgl.cloudfront.net/offer_images/Lifting-Band-Patch-for-Face-and-Chin-Line-Reduces-Double-Chin-V-Line-Chin-Up-Firming_6UEqlyWnCyBIfVl2.jpg"
-          alt="">test
         <NuxtLogo />
         <VuetifyLogo />
       </v-card>

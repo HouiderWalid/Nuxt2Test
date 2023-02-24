@@ -3,6 +3,13 @@ import colors from 'vuetify/es5/util/colors'
 export default {
   // Global page headers: https://go.nuxtjs.dev/config-head
 
+  vue: {
+    config: {
+      productionTip: false,
+      //devtools: true
+    }
+  },
+
   head: {
     titleTemplate: '%s - Nuxt2Test',
     title: 'Nuxt2Test',
