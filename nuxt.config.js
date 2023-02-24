@@ -19,7 +19,7 @@ export default {
     meta: [
       {charset: 'utf-8'},
       {name: 'viewport', content: 'width=device-width, initial-scale=1'},
-      {hid: 'description', name: 'description', content: ''},
+      {hid: 'description', name: 'description', content: 'this is my test description.'},
       {name: 'format-detection', content: 'telephone=no'}
     ],
     link: [
@@ -44,15 +44,21 @@ export default {
     //'nuxt-purgecss'
   ],
 
-/*  purgeCSS: {
-    content: ['/node_modules/vuetify/src/!**!/!*.ts']
+/*  purgecss: {
+    paths: ['/node_modules/vuetify/src/!**!/!*.ts'],
+    whitelist: ['v-application', 'v-application--wrap', 'theme--light'],
+    whitelistPatterns: [/^v-((?!application).)*$/, /^theme--*!/, /.*-transition/],
+    whitelistPatternsChildren: [/^v-((?!application).)*$/, /^theme--*!/],
   },*/
 
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
     // https://go.nuxtjs.dev/axios
     '@nuxtjs/axios',
+    '@nuxtjs/i18n'
   ],
+
+  i18n: {},
 
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
   axios: {
@@ -84,9 +90,27 @@ export default {
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
+    //analyze: true,
     extractCSS: {
       ignoreOrder: true
     },
-    transpile: ['vuetify/lib']
+    transpile: ['vuetify/lib'],
+    optimization: {
+      minimize: true,
+      splitChunks: {
+        chunks: 'all',
+        automaticNameDelimiter: '.',
+        name: true,
+        maxSize: 244000,
+        cacheGroups: {
+          vendor: {
+            name: 'node_vendors',
+            test: /[\\/]node_modules[\\/]/,
+            chunks: 'all',
+            maxSize: 244000
+          }
+        }
+      }
+    }
   }
 }
