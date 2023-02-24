@@ -3,12 +3,14 @@
     "name": "inspire",
     "path": "/inspire",
     "component": "C:\\\\Users\\\\houid\\\\McnWork\\\\Nuxt2Test\\\\pages\\\\inspire.vue",
-    "chunkName": "pages/inspire"
+    "chunkName": "pages/inspire",
+    "_name": "_88ada2d8"
   },
   {
     "name": "index",
     "path": "/",
     "component": "C:\\\\Users\\\\houid\\\\McnWork\\\\Nuxt2Test\\\\pages\\\\index.vue",
-    "chunkName": "pages/index"
+    "chunkName": "pages/index",
+    "_name": "_4da96de8"
   }
 ]
